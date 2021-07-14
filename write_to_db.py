@@ -5,7 +5,11 @@ from sqlalchemy import create_engine
 
 def get_csv(data):
     """
+<<<<<<< HEAD
         Gets scrapped data saved in csv and converts to Pandas DataFrame
+=======
+        Gets srapped data saved in csv and converts to Pandas DataFrame
+>>>>>>> a70d840fc996758f5dd5473385df5ae70e8d6ea2
         
         Parameter:
             .csv file
