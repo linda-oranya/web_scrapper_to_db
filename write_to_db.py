@@ -13,15 +13,13 @@ def get_csv(data):
     df = pd.read_csv(data)
     return df
 
-def db_csv_writer(df):
+def write_csv_to_db(df):
     """
         writes csv file to database after authentication
 
         Parameter:
         df: Pandas DataFrame
     """
-    df.columns = [c.lower() for c in df.columns] #postgres doesn't like capitals or spaces
-
     
     engine = create_engine('postgresql://user:password@localhost/database')
     df.to_sql("home", engine)
@@ -29,4 +27,4 @@ def db_csv_writer(df):
 
 df = get_csv('data.csv')
 
-db_csv_writer(df)
+write_csv_to_db(df)
