@@ -18,6 +18,7 @@ clean_scraped_data.ipynb - This notebook is optional as it can be modified accor
 ### Installation
 
 `pip install bs4`
+
 `pip install request`
 
 ### Usage
