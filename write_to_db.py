@@ -27,6 +27,6 @@ def db_csv_writer(df):
     df.to_sql("home", engine)
 
 
-df = pd.read_csv('data.csv')
+df = get_csv('data.csv')
 
 db_csv_writer(df)
