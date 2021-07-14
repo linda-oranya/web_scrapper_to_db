@@ -82,7 +82,7 @@ class Scraper:
              print ('page does not exist')
             a ={
                 'title':titles,
-                'price':prices,
+                'price(CAD)':prices,
                 'item_url':item_url,
                 'image_url':images,
             }
@@ -92,10 +92,13 @@ class Scraper:
             
         return df
 
-    def to_csv(df,filename):
+    def clean_df(df,filename):
+        """
+         clean dataframe and export to csv
+        """
+        df.dropna(inplace=True)
         df.to_csv(filename,index=False)
 
 
-
     df = scraper('home',10000)
-    file = to_csv('home_data.csv')
+    file = clean_df('home_data.csv')
