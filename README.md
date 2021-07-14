@@ -2,9 +2,13 @@
 
 This is a web scrapping project that scrapes from an ecommerce website (Etsy) and saves to database.
 This website sells different varieties of items, we will be accessing individual items by keyword and scrape the:
+
         - title
+
         - price
+
         - image url
+        
         - item url
 
 The database, etsydata - where the data is pushed to- is hosted on Heroku.
