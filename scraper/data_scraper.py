@@ -79,7 +79,7 @@ def clean_df(df):
         clean dataframe and export to csv
 
         Parameters:
-        .csvfile
+        df - pandas dataframe
 
     """
     df.dropna(inplace=True)
@@ -87,16 +87,13 @@ def clean_df(df):
 
 def df_to_csv(df,filename): 
     """
-        writes data to csv
+        writes dataframe to csv
 
         Parameters:
-        df: Data to write to csv
+        df: pandas dataframe
         filename: csv name
 
     """ 
-    df.to_csv(filename,index=False)
+    data = df.to_csv(f'{filename}.csv',index=False)
+    return data
 
-
-df = scrape('home',1000)
-file = clean_df(df)
-print(file)

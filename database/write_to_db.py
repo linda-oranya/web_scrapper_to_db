@@ -13,6 +13,7 @@ def get_csv(data):
     df = pd.read_csv(data)
     return df
 
+    
 def write_csv_to_db(df):
     """
         writes csv file to database after authentication
@@ -23,8 +24,3 @@ def write_csv_to_db(df):
     
     engine = create_engine('postgresql://user:password@localhost/database')
     df.to_sql("home", engine)
-
-
-df = get_csv('data.csv')
-
-write_csv_to_db(df)
